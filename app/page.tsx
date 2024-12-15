@@ -45,7 +45,8 @@ export default function Home() {
           value={city}
           onChange={(e) => setCity(e.target.value)}
           placeholder="Enter city name..."
-          className="flex-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+          className="flex-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 
+            text-gray-900 bg-white dark:bg-gray-800 dark:text-white"
           onKeyPress={(e) => e.key === 'Enter' && fetchWeather()}
         />
         <button
@@ -66,7 +67,7 @@ export default function Home() {
 
       {/* Weather Display */}
       {weather && !error && (
-        <div className="bg-white/10 backdrop-blur-md p-6 rounded-lg shadow-lg">
+        <div className="weather-card p-6 rounded-lg shadow-lg">
           <h2 className="text-2xl font-bold mb-4">{weather.name}</h2>
           
           <div className="grid gap-4">
